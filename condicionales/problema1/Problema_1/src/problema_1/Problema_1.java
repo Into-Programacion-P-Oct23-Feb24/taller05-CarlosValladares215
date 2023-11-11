@@ -43,15 +43,17 @@ public class Problema_1 {
         // Estructura condicional para dar un descuento
         if (edad > 65) {
             descuento = (costoTotal * 10) / 100;
-            valorCancelar = descuento;
+            valorCancelar = costoTotal - descuento;
         } else {
             valorCancelar = costoTotal;
         }
 
         // Se muestra el valor total a cancelar de una plantilla de luz
-        System.out.printf("""
-                          El valor total a cancelar de su plantilla de luz es de: %.2f $ 
-                          """,valorCancelar);
+        System.out.println("-----------------------------------------------"
+                + "----------------------");
+        System.out.printf("El valor total a cancelar de su plantilla "
+                + "de luz es de: $ %.2f ",valorCancelar);
+        System.out.println("");
 
     }
 

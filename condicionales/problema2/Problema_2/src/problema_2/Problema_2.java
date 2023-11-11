@@ -41,12 +41,14 @@ public class Problema_2 {
         // Condicional que calcula el descuento segun la edad
         if (cantidad > 50) {
             descuento = (costoPedido * 15)/100;
-            costoPedido = descuento;
+            costoPedido = costoPedido - descuento;
             
         }
         
+        System.out.println("-----------------------------------------------"
+                + "----------------------");
         System.out.printf("Descripcion del Articulo: %s \n",descripcion);
-        System.out.printf("Costo del pedido: %.2f $ \n", costoPedido);
+        System.out.printf("Costo del pedido: $ %.2f \n", costoPedido);
         
     }
     

@@ -28,9 +28,10 @@ public class Problema_3 {
         double precioVenta;
 
         // Recopilacion de datos para el programa
-        System.out.println("                Ingrese los datos del autómovil");
+        System.out.println("                                        Ingrese los"
+                + " datos del autómovil");
         System.out.println("-------------------------------------------------"
-                + "-------------------------------");
+                + "----------------------------------------------------------");
         System.out.println("* Ingrese la marca de su auto");
         marca = entrada.nextLine();
         System.out.println("* Ingrese un numero del 1 al 4 "
@@ -44,42 +45,45 @@ public class Problema_3 {
         System.out.println("* Ingrese el costo del auto");
         costo = entrada.nextDouble();
         System.out.println("-------------------------------------------------"
-                + "-------------------------------");
+                + "----------------------------------------------------------");
         // Condicional usada para calcular los impuestos
         if (origen == 1) {
             impuesto = (costo * 20) / 100;
-            precioVenta = impuesto;
-            System.out.println("Como el origen de su carro es alemán "
-                    + "su impuesto por pagar es del 20%");
+            precioVenta = costo - impuesto;
+            System.out.printf("Como el origen de su carro es alemán "
+                    + "su impuesto por pagar es del 20%%");
         } else {
             if (origen == 2) {
                 impuesto = (costo * 30) / 100;
-                precioVenta = impuesto;
-                System.out.println("Como el origen de su carro es japones "
-                        + "su impuesto por pagar es del 30%");
+                precioVenta = costo - impuesto;
+                System.out.printf("Como el origen de su carro es japones "
+                        + "su impuesto por pagar es del 30%%");
 
             } else {
                 if (origen == 3) {
                     impuesto = (costo * 15) / 100;
-                    precioVenta = impuesto;
+                    precioVenta = costo - impuesto;
                     System.out.println("Como el origen de su carro es italiano "
                             + "su impuesto por pagar es del 15%");
                 } else {
                     if (origen == 4) {
                         impuesto = (costo * 8) / 100;
-                        precioVenta = impuesto;
-                        System.out.println("Como el origen de su carro es de "
+                        precioVenta = costo - impuesto;
+                        System.out.printf("Como el origen de su carro es de "
                                 + "Estados Unidos"
-                                + " su impuesto por pagar es del 15%");
+                                + " su impuesto por pagar es del 15%%");
                     } else {
+                        impuesto = 0;
                         precioVenta = costo;
-                        System.out.println("Solo se pueden escojer 4 paises");
+                        System.out.printf("Solo se pueden escojer 4 paises, "
+                                + "por lo tanto al no poder determinar "
+                                + "el porcentaje su impuesto es");
                     }
                 }
-
-                System.out.printf("El precio de venta es de; %.2f $ \n",
-                         precioVenta);
             }
         }
+        System.out.printf(": $ %.2f\n", impuesto);
+        System.out.printf("El precio de venta es de; $ %.2f \n",
+                precioVenta);
     }
 }
